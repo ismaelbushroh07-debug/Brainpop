@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Games</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      background: #7c3aed;
+      padding: 25px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .game-box {
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 400px;
+      background: #222;
+      border-radius: 20px;
+    }
+
+    button {
+      background: #7c3aed;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #9333ea;
+    }
+
+    #score {
+      font-size: 40px;
+      margin: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>💎 Diamond Games</h1>
+    <p>Play • Have Fun • Win</p>
+  </header>
+
+  <div class="game-box">
+    <h2>🎮 Tap Game</h2>
+    <p>Tap the button as many times as you can!</p>
+
+    <div id="score">0</div>
+
+    <button onclick="increaseScore()">TAP ME!</button>
+  </div>
+
+  <script>
+    let score = 0;
+
+    function increaseScore() {
+      score++;
+      document.getElementById("score").textContent = score;
+    }
+  </script>
+
+</body>
+</html>
